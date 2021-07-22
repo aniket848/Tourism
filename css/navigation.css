@@ -1,0 +1,124 @@
+.navigation-checkbox {
+    display: none; }
+  
+  .navigation-button {
+    position: fixed;
+    top: 5.5rem;
+    right: 5.5rem;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 2000;
+    text-align: center; 
+    box-shadow: .5 1rem 1.5rem rgba(0,0,0,.3);
+    transition: all .2s;
+}
+
+.navigation-button:hover{
+    transform: translateY(-3px);
+}
+  
+  .navigation-background {
+    position: fixed;
+    top: 6rem;
+    right: 6rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-image: radial-gradient(#7ed56f, #55c57a);
+    transition: all .8s;
+    z-index: 200; }
+  
+  .navigation-bar {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: -50%;
+    transform: translate(-10%, -50%);
+    backface-visibility: hidden;
+    z-index: 500;
+    opacity: 0;
+    width: 0;
+    transition: all 1s cubic-bezier(0.34, 1.56, 0.64, 1); }
+  
+  .navigation-list {
+    list-style: none;
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+    text-align: center; }
+  
+  .navigation-item {
+    box-sizing: border-box;
+    display: block; }
+    .navigation-item:not(:last-child) {
+      margin-bottom: 2.5rem; }
+  
+  .navigation-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 2.8rem;
+    color: #f7f7f7;
+    text-transform: uppercase;
+    font-weight: 400;
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 230%;
+    transition: all .3s; }
+    .navigation-link:hover {
+      color: #7ed56f;
+      background-position: 100%;
+      transform: translateX(5px); }
+    .navigation-link span {
+      margin-right: 1.5rem; }
+  
+  .navigation-checkbox:checked ~ .navigation-background {
+    transform: scale(80); }
+  
+  .navigation-checkbox:checked ~ .navigation-bar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    width: 100%; }
+  
+  .navigation-checkbox:checked + .navigation-button > .navigation-sign {
+    background-color: transparent; }
+  
+  .navigation-checkbox:checked + .navigation-button > .navigation-sign::after {
+    top: 0;
+    transform: rotate(135deg); }
+  
+  .navigation-checkbox:checked + .navigation-button > .navigation-sign::before {
+    top: 0;
+    transform: rotate(-135deg); }
+  
+  .navigation-sign {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    width: 3.2rem;
+    height: .3rem;
+    background-color: #333;
+    border-radius: 35%;
+    margin-top: 2.8rem; }
+    .navigation-sign::before, .navigation-sign::after {
+      position: absolute;
+      content: "";
+      width: 3.2rem;
+      height: .3rem;
+      background-color: #333;
+      border-radius: 35%;
+      left: 0;
+      transition: all .5s;
+      backface-visibility: hidden; }
+    .navigation-sign::before {
+      top: -.8rem; }
+    .navigation-sign::after {
+      top: .8rem; }
+  
+  .navigation-button:hover > .navigation-sign::after {
+    top: 1rem; }
+  
+  .navigation-button:hover > .navigation-sign::before {
+    top: -1rem; }

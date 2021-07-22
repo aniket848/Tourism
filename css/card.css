@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ html{
+     font-size: 10px;
+ }
+ 
+ body{
+     background-color: #eee;
+ }
+ 
+ .container{
+     position: relative;
+     height: 55rem;
+     width:35rem;
+     background-color: #fff;
+     transition: all .2s;
+     border-radius: 1rem;
+     margin:2rem auto;
+     text-align: center;
+     padding:0rem;
+     box-shadow: 0 2rem 4rem rgba(0,0,0,.3);
+     border-top-left-radius: 1rem; 
+ }
+ 
+ .card-style{
+     /*background-image: linear-gradient(to right bottom,#fff, #55c57a , #7ed56f);*/
+     background-color: #b2ebf2;
+     padding:9rem 0 9rem;
+     clip-path: polygon(0 7% , 100% 0% , 100% 93% ,0 100%);
+ }
+ 
+ .style{
+     width:100%;
+     height:60%;
+     background-image: linear-gradient(to right bottom , #7ed56f ,#55c57a,#fff);
+     clip-path: circle(20rem at 7rem 4.5rem);
+     transition: all 1s;
+     border-radius: 1rem; 
+ }
+ 
+ .container-img{
+     transition: all 1s;
+     position: absolute;
+     top:10rem;
+     width:100%;
+ }
+ 
+ .container-image{
+     width:80%;
+     display: inline-block;
+     border-radius: .5rem;
+ }
+ 
+ .container-heading{
+      position: absolute;
+      left:50%;
+     transform: translateX(-50%);
+      top:37rem;
+      width:90%;
+      display: block;
+      margin: 0 auto;
+      transition: all 1s;
+ }
+ 
+ .text{
+     font-size: 3rem;
+ }
+ 
+ .container-details{
+     font-size: 1.3rem;
+     position: absolute;
+     left:50%;
+     transform: translateX(-50%);
+     bottom: -7rem;
+     opacity: 0;
+     width:80%;
+     transition: all 1s;
+ }
+ 
+ 
+ 
+ .details-heading:not(:last-child){
+     
+     border-bottom: 2px solid #eee;
+     margin-bottom: 1rem;
+ }
+ 
+ .ul{
+     list-style: none;
+     font-size: 2.5rem;
+   }
+ 
+ 
+ 
+ .container:hover{
+     transform: translateY(-.9rem);
+     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+ }
+ 
+ .container:hover  .container-img{
+    top:3rem;
+    transform: scale(1.1);
+ }
+ 
+ .container:hover  .container-heading{
+    top:27rem;
+ }
+ 
+ .container:hover  .container-details{
+    bottom: 4.5rem;
+     opacity: 1;
+ }
+ 
+ .container:hover .style{
+      background-image: linear-gradient(to right bottom ,#fff, #7ed56f ,#55c57a);
+     clip-path: circle(25rem at 14rem 7rem);
+ }
+ 
+ .container:hover .details-heading{
+     opacity: 1;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
